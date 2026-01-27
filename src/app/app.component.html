@@ -1,0 +1,68 @@
+<div class="container">
+  <h1>IGX Icon Button Hover Issue Demo</h1>
+
+  <p class="description">
+    Click the "Toggle State" button to switch between views. Notice the hover
+    flicker on the icon buttons when switching states.
+  </p>
+
+  <div class="state-display">
+    <strong>Current State:</strong> {{ viewState() }}
+  </div>
+
+  <div class="content-area">
+    @switch (viewState()) {
+      @case ("state-a") {
+        <div class="button-group">
+          <h3>State A - Two Icon Buttons</h3>
+          <div class="buttons-row">
+            <button igxButton="flat" igxRipple>
+              <igx-icon>edit</igx-icon>
+              <span>Edit</span>
+            </button>
+            <button igxButton="flat" igxRipple>
+              <igx-icon>delete</igx-icon>
+              <span>Delete</span>
+            </button>
+          </div>
+        </div>
+      }
+      @case ("state-b") {
+        <div class="button-group">
+          <h3>State B - Two Icon Buttons</h3>
+          <div class="buttons-row">
+            <button igxButton="flat" igxRipple>
+              <igx-icon>save</igx-icon>
+              <span>Save</span>
+            </button>
+            <button igxButton="flat" igxRipple>
+              <igx-icon>cancel</igx-icon>
+              <span>Cancel</span>
+            </button>
+            <igx-input-group>
+              <input igxInput />
+            </igx-input-group>
+          </div>
+        </div>
+      }
+    }
+  </div>
+
+  <div class="toggle-section">
+    <button igxButton="contained" igxRipple (click)="toggleState()">
+      <igx-icon>swap_horiz</igx-icon>
+      <span>Toggle State</span>
+    </button>
+  </div>
+
+  <div class="instructions">
+    <h3>How to reproduce:</h3>
+    <ol>
+      <li>Hover over one of the icon buttons in the current state</li>
+      <li>Click "Toggle State" to switch to the other view</li>
+      <li>
+        Observe the hover effect flickering/appearing briefly on the new buttons
+      </li>
+    </ol>
+  </div>
+</div>

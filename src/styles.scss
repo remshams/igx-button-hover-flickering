@@ -1,0 +1,26 @@
+@use 'igniteui-angular/theming' as *;
+
+// Ignite UI Theme Configuration
+@include core();
+@include typography();
+@include theme(
+  $palette: $light-material-palette,
+  $elevations: $material-elevations
+);
+
+// Global styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+}
+
+// Ensure proper button styling
+.igx-button--flat {
+  transition: all 0.2s ease-in-out;
+}
