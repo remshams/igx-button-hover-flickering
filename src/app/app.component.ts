@@ -1,7 +1,7 @@
 import { Component, signal } from "@angular/core";
 import {
   IgxButtonModule,
-  IgxIconModule,
+  IgxIconComponent,
   IgxInputDirective,
   IgxInputGroupComponent,
 } from "igniteui-angular";
@@ -11,7 +11,7 @@ import {
   standalone: true,
   imports: [
     IgxButtonModule,
-    IgxIconModule,
+    IgxIconComponent,
     IgxInputDirective,
     IgxInputGroupComponent,
   ],
